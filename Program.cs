@@ -19,7 +19,7 @@ public class Program
         Banco dba = new Banco();
         app.MapGet("/listaClientes", (HttpContext contexto) =>{
 
-                contexto.Response.WriteAsJsonAsync( dba.GetListaString());
+                contexto.Response.WriteAsync( dba.GetListaString());
         });
 
         app.Run();
